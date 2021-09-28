@@ -17,7 +17,11 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/components.css">
 <!--  CSS - MEM-C1AD69.CSS -->
  	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/mem-c1ad69.css">
+  <!-- AJAX -->
  	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <!-- fontawesome -->
+    <script src="https://your-site-or-cdn.com/fontawesome/v6.0.0-beta2/js/all.js" data-auto-replace-svg="nest"></script>
+
 	<script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script>
   	<!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
   	<script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
@@ -27,7 +31,7 @@
 </head>
 <body>
 <div data-collapse="medium" data-animation="default" data-duration="400" id="Navigation" role="banner" class="nav-bar-v2 w-nav">
-    <a href="#" class="nav-brand-v2 w-nav-brand"><?php
+    <a href="http://localhost/www/page-hom/" class="nav-brand-v2 w-nav-brand"><?php
           
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
@@ -61,11 +65,6 @@
 
         ?>
         </div>
-	      <!-- <a href="#" class="nav-link w-nav-link">Home</a>
-	      <a href="#" class="nav-link w-nav-link">Notícias</a>
-	      <a href="#" class="nav-link w-nav-link">Matérias</a>
-	      <a href="#" class="nav-link w-nav-link">Filmes</a>
-	      <a href="#" class="nav-link w-nav-link">Podcasts</a> -->
 	    </nav>
     <div class="nav-right-v2">
       <a href="#" class="button subscribe-button w-button">Receba Mimos</a>
@@ -86,7 +85,21 @@
     </div>
     <div class="side-menu">
       <div class="full-height-menu-contents">
-        <a href="#" class="w-inline-block"><img src="logo-mem2x.png" width="200"></a>
+        <div class="logo" id="menu-lateral">
+           <a href="http://localhost/www/index.php/home/" class="nav-brand-v2 w-nav-brand " class="w-inline-block"><?php
+          
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+
+            if ( has_custom_logo() ) {
+              echo '<img src="' . esc_url( $logo[0] ) . '" class="img-fluid"  >';
+            } else {
+              echo '<h1>' . get_bloginfo('name') . '</h1>';
+              echo '<p class="lead">' . get_bloginfo('description') . '</p>';
+            }
+          
+          ?></a>
+        </div>
         <div class="full-height-menu-links">
 
           <?php

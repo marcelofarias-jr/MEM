@@ -11,7 +11,8 @@ add_action('after_theme_setup', 'men_title_tag');
 register_nav_menus(
 	array(
 		'menu_principal' => 'Menu Principal',
-		'menu_dopdown'	=> 'Menu Dopdown'
+		'menu_dopdown'	=> 'Menu Dopdown',
+		'menu_rodape' => '	'
 	)
 );
 
@@ -28,6 +29,7 @@ add_action( 'after_setup_theme', 'register_navwalker' );
  // Adicionar o logotipo
 add_theme_support( 'custom-logo' );
 
+//Adicionando mininaturas
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1280, 720,true);
 remove_action( 'begin_fetch_post_thumbnail_html', '_wp_post_thumbnail_class_filter_add' );

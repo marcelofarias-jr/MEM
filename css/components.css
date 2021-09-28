@@ -62,9 +62,7 @@ img {
 html.w-mod-touch * {
   background-attachment: scroll !important;
 }
-.post-categories a{
-  text-decoration: none;
-}
+
 .w-block {
   display: block;
 }
@@ -1813,8 +1811,26 @@ textarea.w-select {
 }
 #Navigation img{
   width: 7em;  
+  margin-left: 2em;
 }
 
 .menu ul{
   list-style: none;
+}
+
+.legendaDestaque{
+  padding-bottom: 12em;
+}
+.legendaDestaque a{
+  text-decoration: none;
+  color: white;
+}
+.legendaDestaque p{
+  line-height: 1.5em;
+  font-size: 3em;
+  text-decoration: underline;
+}
+.links{
+  width: 100%;
+  margin-left: auto;
 }

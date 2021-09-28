@@ -2535,9 +2535,7 @@ body {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-#menu-menu-dopdown{
-  list-style: none;
-}
+
 .full-height-menu-link {
   display: -ms-grid;
   display: grid;
